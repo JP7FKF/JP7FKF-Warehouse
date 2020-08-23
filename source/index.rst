@@ -90,6 +90,7 @@ Welcome to JP7FKF-Warehouse!
   unix/httpd
   unix/ubuntu
   unix/syslog
+  unix/fail2ban
   network/ipv6
   network/l1
   network/l2

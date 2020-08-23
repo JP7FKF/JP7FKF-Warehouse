@@ -14,6 +14,7 @@
 - 浅草 洋食ヨシカミ
 - [葡萄舎 （ぶどうや） - 神田/インドカレー [食べログ]](https://tabelog.com/tokyo/A1310/A131002/13036906/)
 - [かつ進 三組坂下外神田店 （かつしん） - 末広町/とんかつ [食べログ]](https://tabelog.com/tokyo/A1311/A131101/13008529/)
+- [神楽坂の小さなスコティッシュパブ　The Royal Scotsman | クラフトビールとウイスキー、おいしい英国料理が自慢のパブ](https://www.royalscotsman.jp/blog/)
 
 ## Hokkaido
 - sapporo

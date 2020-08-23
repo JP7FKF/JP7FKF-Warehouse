@@ -734,10 +734,11 @@ offline_failed_login_delay = 5
 ```
 
 -  References
-  - [None](https://kifarunix.com/how-to-configure-sudo-via-openldap-server/)
+  - [How to Configure SUDO via OpenLDAP Server - kifarunix.com](https://kifarunix.com/how-to-configure-sudo-via-openldap-server/)
   - [Sudoers LDAP Manual](https://www.sudo.ws/man/1.8.17/sudoers.ldap.man.html)
-  - [None](https://qrunch.net/@komu/entries/6k2cx7indCQYQAFy?ref=qrunch)
+  - [LDAPで快適Linux環境 #6 sudoの設定 | Qrunch（クランチ）](https://qrunch.net/@komu/entries/6k2cx7indCQYQAFy?ref=qrunch)
   - [OpenLDAPとSSSDを利用したユーザー認証 - Qiita](https://qiita.com/mypaceshun/items/9c3b3f0ef9580c6d60ea)
+
 
 ### sssd client側で `groups: cannot find name for group ID` と言われる
 groupsとかidとか打つと `groups: cannot find name for group ID` 事象にあった．
@@ -1011,12 +1012,12 @@ post-auth{
 - [GitHub - AndriiGrytsenko/openssh-ldap-publickey: Wrapper for OpenSSH to store public keys inside the OpenLDAP entry.](https://github.com/AndriiGrytsenko/openssh-ldap-publickey)
 - [None](https://www.osstech.co.jp/~hamano/posts/centos7-openldap-ssh/openssh-lpk-openldap.ldif)
 - [Ubuntu 16.04上でオープンLDAPのインストールと設定 - hirosanote’s blog](http://hirosanote.hatenablog.jp/entry/2018/01/27/221527)
-- [None](https://kifarunix.com/configure-sssd-for-openldap-authentication-on-ubuntu-18-04/)
+- [Configure SSSD for OpenLDAP Authentication on Ubuntu 18.04 - kifarunix.com](https://kifarunix.com/configure-sssd-for-openldap-authentication-on-ubuntu-18-04/)
 - [Ubuntu 14.04 SSSD and OpenLDAP Authentication](https://www.ossramblings.com/Ubuntu-14.04-SSSD-and-OpenLDAP-Authentication)
 - [LDAPで構造型オブジェクトクラスは変更できない？ | OpenGroove](https://open-groove.net/openldap/change-structual-object-class/)
 - [LDAPにユーザ、グループを追加し、Linuxアカウントとして設定したときの備忘録 - tail -f /var/log/こうちかずお.log](https://kohchi.hatenablog.com/entry/20131201/1385885485)
 - [Sudoers LDAP Manual](https://www.sudo.ws/man/1.8.17/sudoers.ldap.man.html#EXAMPLES)
-- [None](https://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/)
+- [How to enable MemberOf using OpenLDAP — Adimian](https://www.adimian.com/blog/2014/10/how-to-enable-memberof-using-openldap/)
 - [FreeRADIUS Post Authentication – Bliss](https://jbliss.net/2019/04/freeradius-post-authentication/)
 - [modules/Rlm_ldap](https://wiki.freeradius.org/modules/Rlm_ldap)
 - [OpenLDAP Server 日本語訳 - Qiita](https://qiita.com/JhonnyBravo/items/b18341b4cf20b9d865e4)
