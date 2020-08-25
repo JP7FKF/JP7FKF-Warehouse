@@ -196,3 +196,4 @@ Status for the jail: sshd
 ## References
 - [Ubuntu 18.04 LTS iptables Fail2ban 設定等 | ひかるLOG](https://bellett.moe.hm/index.php/2018/08/15/ubuntu-18-04-lts-iptables-fail2ban/)
 - [fail2banでしつこい攻撃者だけ長期BANする方法 | TeraDas](https://www.teradas.net/archives/15002/)
+- [fail2banでdirectory traversalなwebアクセスを蹴る - Qiita](https://qiita.com/mrmt/items/00e1cc86b8406dd4e8ab)

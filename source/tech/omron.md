@@ -105,6 +105,22 @@ MODE="0664", GROUP="nut", SYMLINK+="ups%n"
   default.battery.voltage.low = 11
 ```
 
+## zabbix連携
+- zabbix-agent: `nut_ups.conf`
+```
+UserParameter=ups.nut.battery.voltage[*],upsc $1 battery.voltage 2>/dev/null
+UserParameter=ups.nut.battery.voltage.high[*],upsc $1 battery.voltage.high 2>/dev/null
+UserParameter=ups.nut.battery.voltage.low[*],upsc $1 battery.voltage.low 2>/dev/null
+UserParameter=ups.nut.input.frequency[*],upsc $1 input.frequency 2>/dev/null
+UserParameter=ups.nut.input.voltage[*],upsc $1 input.voltage 2>/dev/null
+UserParameter=ups.nut.output.voltage[*],upsc $1 output.voltage 2>/dev/null
+UserParameter=ups.nut.ups.temperature[*],upsc $1 ups.temperature 2>/dev/null
+UserParameter=ups.nut.ups.status[*],upsc $1 ups.status 2>/dev/null
+UserParameter=ups.nut.ups.load[*],upsc $1 ups.load 2>/dev/null
+```
+- zabbix-server template
+  - [zabbix_template_network_ups_tools.xml · GitHub](https://gist.github.com/jp7fkf/73a43820ceb224d410b28657ae407d59)
+
 # References
 - [OMRON BY50SをZabbixで監視できるようにする：びぼうろぐ：So-netブログ](https://bibo-log.blog.ss-blog.jp/2012-03-13)
 - [Omron BY50S を Linux で使う (udev のイケてる設定編) - Qiita](https://qiita.com/sugi_0000/items/89c025e3804cfcfdf11e)

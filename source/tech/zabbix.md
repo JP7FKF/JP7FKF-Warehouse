@@ -161,3 +161,13 @@ Recovery: {Template Server HP iLO SNMPv2:sensor.temp.value[cpqHeTemperatureCelsi
 Problem: {Template Server HP iLO SNMPv2:sensor.temp.value[cpqHeTemperatureCelsius.System.{#SNMPINDEX}].avg(5m)}>{$TEMP_WARN:"System"}
 Recovery: {Template Server HP iLO SNMPv2:sensor.temp.value[cpqHeTemperatureCelsius.System.{#SNMPINDEX}].max(5m)}<{$TEMP_WARN:"System"}-3
 ```
+
+## 文字列からintegerにして圧縮する
+- preprocessingを使って，ある固定文字列をstatus num的に変換する
+```
+Regular expression:: (.*), \1:No=0:Yes=1:Connecting=2
+Regular expression:: (No|Yes|Connecting)(?=.*:\1=(\d)), \2
+```
+- これでNoは0に，Yesは1に，Connectingは2にそれぞれ変換される．
+- これを使ってvalue mapで再度文字列するとデータ量が抑えられる．
+- ref: [Getting numeric data from the item value string - ZABBIX Forums](https://www.zabbix.com/forum/zabbix-help/46332-getting-numeric-data-from-the-item-value-string)
