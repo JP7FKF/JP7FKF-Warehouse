@@ -59,6 +59,7 @@
   - リアルタイム性に優れる
 - [Telegraf Open Source Server Agent | InfluxData](https://www.influxdata.com/time-series-platform/telegraf/)
   - [GitHub - influxdata/telegraf: The plugin-driven server agent for collecting & reporting metrics.](https://github.com/influxdata/telegraf)
+- [Netdata](https://www.netdata.cloud/)
 
 ## ref
 - [OSSのおすすめ監視サーバ・監視ツール比較17選 | OSSでのシステム構築・デージーネット](https://www.designet.co.jp/ossinfo/selection/monitoring-server.html)

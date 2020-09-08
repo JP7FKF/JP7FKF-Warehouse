@@ -20,7 +20,6 @@ gnuplot     libgit2     nmap      qt      xz
 graphite2   libheif     node      r     zsh
 harfbuzz    libidn2     oniguruma   rbenv
 ```
-
 ## iterm
 - `/Users/yudaihashimoto/.iterm_log` にsession logをとる．
 
