@@ -605,3 +605,10 @@ Light Gray  0;37     White         1;37
 \D : datetime
 ```
 - ref: [ターミナルの表示内容(プロンプト)の変更・カスタマイズ方法まとめ - Qiita](https://qiita.com/hmmrjn/items/60d2a64c9e5bf7c0fe60)
+
+## カジュアルにncでhttp request
+- `(echo "GET / HTTP/1.1";echo "Host: 10.2.0.5:80";echo "Accept */*";echo) | nc 10.0.0.1 80 -v`
+
+## netcatでhttp server
+- `while true; do; echo -e "HTTP/1.1 200 OK\n\n $(date)" | nc -l 8080; done`
+  - 終了するときは`C-z`して`kill`する必要あり．

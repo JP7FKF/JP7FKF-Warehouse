@@ -1,17 +1,16 @@
 # OMRON
 - いいものを作ってる会社だと思う(個人の意見です)
 
-
-# OMRONのUPSをRaspberry Piとzabbixで監視する．
+## OMRONのUPSをRaspberry Piとzabbixで監視する．
 オムロンのUPS BY50Sを持っているが，こいつはRJ45の口がなく，SNMP/syslogを用いた監視ができない．
 しかしUSB-Bの口がついていて，ここからなら情報を抜くことができる．
 今回はraspberry piとUPS をUSB接続し，Raspgerri Piをproxy/media converterとして利用する形でzabbixでUPSを監視してみることにする．
 
-# 準備/前提
+### 準備/前提
 Raspberry Piはversion4の4Dmodelを，OSにはubuntu server 18.04を用いている．
 様々なUPSの情報を取得することができるNetwork UPS Toolsというものが存在する．今回はこれを利用する．
 
-# installation/configuration
+### installation/configuration
 Network UPS Toolsのinstall
 ```
 sudo apt install nut
@@ -105,7 +104,7 @@ MODE="0664", GROUP="nut", SYMLINK+="ups%n"
   default.battery.voltage.low = 11
 ```
 
-## zabbix連携
+### zabbix連携
 - zabbix-agent: `nut_ups.conf`
 ```
 UserParameter=ups.nut.battery.voltage[*],upsc $1 battery.voltage 2>/dev/null
@@ -121,7 +120,7 @@ UserParameter=ups.nut.ups.load[*],upsc $1 ups.load 2>/dev/null
 - zabbix-server template
   - [zabbix_template_network_ups_tools.xml · GitHub](https://gist.github.com/jp7fkf/73a43820ceb224d410b28657ae407d59)
 
-# References
+### References
 - [OMRON BY50SをZabbixで監視できるようにする：びぼうろぐ：So-netブログ](https://bibo-log.blog.ss-blog.jp/2012-03-13)
 - [Omron BY50S を Linux で使う (udev のイケてる設定編) - Qiita](https://qiita.com/sugi_0000/items/89c025e3804cfcfdf11e)
 - [ONGS Inc.](http://www.ongs.co.jp/software/omronupsd/index.html.ja)
