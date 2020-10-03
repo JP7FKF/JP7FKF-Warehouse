@@ -25,13 +25,16 @@ from recommonmark.transform import AutoStructify
 # -- Project information -----------------------------------------------------
 
 project = 'JP7FKF-Warehouse'
-copyright = '2018, JP7FKF'
-author = 'JP7FKF'
+copyright = '2018-2020, Yudai Hashimoto'
+author = 'Yudai Hashimoto'
+
+html_title = project
+html_show_sphinx = False
 
 # The short X.Y version
-version = ''
+#version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+#release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -109,7 +112,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'JP7FKF-Warehousedoc'
+htmlhelp_basename = 'JP7FKF-Warehouse'
 
 
 # -- Options for LaTeX output ------------------------------------------------
