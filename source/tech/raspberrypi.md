@@ -77,6 +77,26 @@ exit 0
 ```
 - [【新旧対応】Linuxでの自動起動の設定方法を解説](https://eng-entrance.com/linux_startup)
 
+- ubuntu20くらいでやるときはrclocal serviceを作る必要あり
+  - `sudo systemctl daemon-reload` とか `sudo systemctl enable rc-local` とか `sudo chmod +x /etc/rc.local` とか基本的なことをわすれずにやる
+  - `sudo vim /etc/systemd/system/rc-local.service`
+```
+[Unit]
+ Description=/etc/rc.local Compatibility
+ ConditionPathExists=/etc/rc.local
+
+[Service]
+ Type=forking
+ ExecStart=/etc/rc.local start
+ TimeoutSec=0
+ StandardOutput=tty
+ RemainAfterExit=yes
+ SysVStartPriority=99
+
+[Install]
+ WantedBy=multi-user.target
+```
+
 ### crontabにこんな感じでかくと起動時に実行する．
 ```
 @reboot /bin/sh /home/jp7fkf/cmd_boot.sh

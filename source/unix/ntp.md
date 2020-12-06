@@ -143,7 +143,7 @@ hpet
 - [ntpq -pコマンドの出力メモ | 電子計算機の操縦桿](http://yeh.jp/blog/ntpq-p/)
 
 ## memo
-spike_detect 
+spike_detect
 clock_step
 freq_mode
 no_sys_peer
@@ -166,3 +166,12 @@ PTP ではネットワークインターフェースチップのMACやPHYに実�
 ```
 - ref: [Endrun IEEE 1588 PTP グランドマスタークロック](https://www.shoshin.co.jp/c/endrun/1588ptp.html)
 - ref: [vol10. PTP(Precision Time Protocol)について調べてみた - ジョンのblog](http://john-rama01.hatenablog.com/entry/2016/09/12/192536)
+
+## systemd-timesyncdを使う
+- `/etc/systemd/timesyncd.conf`
+  - ここで参照先ntpサーバを指定する．
+```
+NTP=ntp.nict.jp
+```
+- `$ sudo systemctl restart systemd-timesyncd.service`
+- `$ sudo systemctl status systemd-timesyncd.service`
